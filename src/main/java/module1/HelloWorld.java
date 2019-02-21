@@ -1,11 +1,10 @@
 package module1;
 
+import de.fhpotsdam.unfolding.core.Coordinate;
+import de.fhpotsdam.unfolding.providers.*;
 import processing.core.PApplet;
 import de.fhpotsdam.unfolding.UnfoldingMap;
 import de.fhpotsdam.unfolding.geo.Location;
-import de.fhpotsdam.unfolding.providers.AbstractMapProvider;
-import de.fhpotsdam.unfolding.providers.Google;
-import de.fhpotsdam.unfolding.providers.MBTilesMapProvider;
 import de.fhpotsdam.unfolding.utils.MapUtils;
 
 /**
@@ -66,7 +65,7 @@ public class HelloWorld extends PApplet {
 		 * Providers : http://unfoldingmaps.org/javadoc/de/fhpotsdam/unfolding/providers/package-summary.html
 		 * *************************************************************************************************************/
 
-		AbstractMapProvider provider = new Google.GoogleTerrainProvider();
+		AbstractMapProvider provider = new Microsoft.RoadProvider() ;
 		// Set a zoom level
 		int zoomLevel = 10;
 		
@@ -98,7 +97,7 @@ public class HelloWorld extends PApplet {
 		// DONE: Add code here that creates map2
 		map2 = new UnfoldingMap(this, 410, 50, 350, 500, provider);
 		// Seattle - Washington State - USA
-		map2.zoomAndPanTo(zoomLevel, new Location(47.6f, -122.3f));
+		map2.zoomAndPanTo(zoomLevel, new Location(22.396428, 114.109497));
 		MapUtils.createDefaultEventDispatcher(this, map2);
 	}
 
@@ -108,6 +107,7 @@ public class HelloWorld extends PApplet {
 	public void draw() {
 		// So far we only draw map1...
 		// DONE: Add code so that both maps are displayed
+//		PApplet.main(new String[] { "HelloWorld" });
 		map1.draw();
 		map2.draw();
 	}
