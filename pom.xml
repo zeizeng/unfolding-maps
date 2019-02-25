@@ -37,7 +37,12 @@
             <systemPath>${basedir}/lib/unfolding.0.9.7-uscd.jar</systemPath>
             <type>jar</type>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.10.2</version>
+        </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
