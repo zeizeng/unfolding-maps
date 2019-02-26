@@ -65,7 +65,7 @@ public class EarthquakeCityMap extends PApplet {
 			// earthquakesURL = "2.5_week.atom";
 		}
 		
-	    map.zoomToLevel(2);
+	    map.zoomToLevel(5);
 	    MapUtils.createDefaultEventDispatcher(this, map);	
 			
 	    // The List you will populate with new SimplePointMarkers
